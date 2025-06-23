@@ -1,0 +1,87 @@
+@use 'variables' as *;
+
+/*-----------------------FOOTER-------------------------------*/
+footer {
+  background-color: $beige;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+
+  // SECCIÓN
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    // DIVISIONES DENTRO DE LA SECCIÓN
+    div {
+      flex: 1 50%;
+      margin: 20px;
+      flex-direction: column;
+      align-items: center;
+ 
+        img {
+          max-width: 150px;
+          height: 40%;
+          width: 40%;
+          align-items: center;
+        }
+      }
+      h3 {
+        text-align: left;
+        font-family: $h;
+        font-weight: normal;
+        font-size: 24px;
+      }
+    
+  }
+  p {
+    text-align: left;
+    margin-top: 8px;
+    font-size: 16px;
+    color: $verde;
+    display: block;
+    margin-bottom: 0;
+    font-family: $p;
+    font-weight: $thin;
+
+  
+    &.footer_derechos_reservados {
+      text-align: left;
+      margin-top: 8px;
+      font-size: 1rem;
+      color: $verde;
+      margin-bottom: 0;
+      flex-basis: 100%;
+    }
+  }
+
+//REDES
+  .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    .iconos {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+      cursor: pointer;
+     margin: 8px;
+
+      .icono-redes {
+        width: 32px;
+        gap: 10px;
+      }
+    }
+  }
+}

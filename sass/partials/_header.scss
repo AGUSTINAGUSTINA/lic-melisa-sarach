@@ -1,0 +1,170 @@
+@use 'variables' as *;
+
+/* CONTIENE EL LOGO PRINCIPAL Y NAV BAR */
+/* LOGO PRINCIPAL */
+.logo_container {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 40%;
+  max-width: 100%;
+
+  .logo_navbar {
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    align-self: flex-start;
+  }
+}
+
+
+/*Se utilizó bootstrap para agregar un menú desplegable para la barra 
+de navegacion en mobile*/
+/* NAV BAR */
+/* BOTÓN DE ÍCONO MENÚ (toggler) */
+.custom_toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 32px;
+  height: 32px;
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+/* MENÚ DE LINKS EN DESKTOP */
+.custom_collapse {
+  justify-content: flex-end;
+
+  /* MENÚ DE LINKS DESPLEGABLE EN MOBILE */
+  &.show {
+    z-index: 1050;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav_turnos {
+    background-color: $verde;
+    font-family: $p;
+    width: 230px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 19px;
+    color: white;
+    text-decoration: none;
+    justify-self: center;
+    align-items: center;
+  }
+}
+
+.container_custom_navbar {
+  display: flex;
+  align-content: flex-end;
+  gap: 10px;
+}
+
+.custom-navbar {
+  background-color: $blanco;
+  border-radius: 10px;
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+  border-bottom: none;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  li {
+    margin-left: 10px;
+
+    a {
+      font-family: $p;
+      font-size: 16px;
+      font-weight: $semibold;
+      color: $verde;
+      text-decoration: none;
+      border-radius: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      &:hover {
+        text-decoration: underline; // Subrayado al pasar el mouse
+        text-underline-offset: 4px; // Aleja un poco la línea
+        text-decoration-thickness: 1.5px; // Opcional: más fina o gruesa
+        color: $verde;
+        transition: all 0.4s ease-in-out; // Ajustá la velocidad
+
+      }
+    }
+  }
+}
+
+
+.nav_turnos {
+  background-color: $verde;
+  font-family: $p;
+  font-size: 16px;
+  border-radius: 19px;
+  font-weight: $bold;
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-color: $verde;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $verde-claro;
+    font-family: $p;
+    font-size: 16px;
+    border-radius: 19px;
+    font-weight: $bold;
+    color: $verde;
+    text-decoration: none;
+    border-color: solid $verde;
+  }
+}
+
+.menu_icon {
+  border: none;
+  width: 24px;
+  height: 24px;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.span-brand {
+  font-family: $p;
+  font-size: 16px;
+  margin-left: 0px;
+  font-weight: $semibold;
+  color: $verde;
+}
