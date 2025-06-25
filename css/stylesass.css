@@ -242,4 +242,76 @@ footer .redes .iconos .icono-redes {
   gap: 10px;
 }
 
+.carousel-caption-custom,
+.carousel-caption-custom-1 {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  max-width: 800px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-caption-custom-2 {
+  position: absolute;
+  top: 35%;
+  right: 13%;
+  text-align: right;
+  z-index: 10;
+}
+.carousel-caption-custom-2 h2 {
+  font-family: "Trirong", serif;
+  font-size: 32px;
+  color: #536E64;
+  margin: 0;
+  font-weight: bold;
+}
+
+.carousel-caption-custom-1 h1 {
+  font-family: "Trirong", serif;
+  font-size: 40px;
+  color: white;
+}
+.carousel-caption-custom-1 h2 {
+  font-family: "Trirong", serif;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.carousel-caption-custom-1 p {
+  font-family: "Taviraj", serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.botones_container a#consulta {
+  background-color: #536E64;
+  color: #fff;
+  margin-top: 15px;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: "Taviraj", serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.botones_container a#consulta:hover {
+  background-color: #C0CEC9;
+  color: #536E64;
+  border: 2px solid #536E64;
+}
+
+.frase {
+  font-family: "Trirong", serif;
+  font-size: 24px;
+  text-align: center;
+  color: #536E64;
+  padding: 5%;
+}
+
 /*# sourceMappingURL=stylesass.css.map */
