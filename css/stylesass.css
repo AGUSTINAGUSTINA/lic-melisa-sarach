@@ -311,14 +311,22 @@ footer .redes .iconos .icono-redes {
     z-index: 10;
     width: auto;
   }
-  .carousel-caption-custom-3 h2, .carousel-caption-custom-3 p {
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  .carousel-caption-custom-3 .card-floral {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+    padding: 30px 40px;
+    max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+  }
+  .carousel-caption-custom-3 .card-floral h2,
+  .carousel-caption-custom-3 .card-floral p {
+    color: #536E64;
     font-weight: 400;
     max-width: 600px;
     margin: 0 auto;
   }
-  .carousel-caption-custom-3 .botones_container {
+  .carousel-caption-custom-3 .card-floral .botones_container {
     margin-top: 5px;
     display: flex;
     justify-content: center;
