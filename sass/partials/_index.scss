@@ -1,7 +1,9 @@
 @use 'variables' as *;
 
-.carousel-caption-custom,
-.carousel-caption-custom-1 {
+//CARRUSEL
+@media screen and (min-width: 1024px) {
+  .carousel-caption-custom,
+  .carousel-caption-custom-1 {
     position: absolute;
     top: 35%;
     left: 13%;
@@ -12,76 +14,474 @@
     align-items: center;
     text-align: center;
     z-index: 10;
-}
 
-.carousel-caption-custom-2 {
-  position: absolute;
-  top: 35%;
-  right: 13%;
-  text-align: right;
-  z-index: 10;
+    h1,
+    h2,
+    p {
+      color: white;
+    }
+  }
+
+  .carousel-caption-custom-2 {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translateX(-40%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 10;
+
+    h2,
+    p {
+      color: white;
+      font-weight: $regular;
+    }
+
+    .destellos {
+      color: white;
+      animation: crecerTitilar 2s ease-in-out infinite alternate;
+    }
+
+    .botones_container {
+      margin-top: 20px;
+
+      a#consulta {
+        background-color: #8E7868;
+        color: white;
+        border: 2px solid $beige;
+        margin-top: 15px;
+
+        &:hover {
+          background-color: $beige;
+          color: #8E7868;
+          border: 2px solid #8E7868;
+        }
+      }
+    }
+  }
+
+ .carousel-caption-custom-3 {
+    position: absolute;
+    top: 30%;
+    left: 50% !important;        // asegurar que esté en el 50%
+    transform: translateX(-50%) !important;  // centrar con transform
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    width: auto;                 // evitar que tome width de otro lado
+
+    h2, p {
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);  // sombra más visible
+      font-weight: $regular;
+      max-width: 600px;          // para controlar ancho del texto
+      margin: 0 auto;            // centrar texto en bloque
+    }
+
+    .botones_container {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      
+    }
+  }
+}
+  
+
+  .carousel-caption-custom-1,
+  .carousel-caption-custom-2,
+  .carousel-caption-custom-3 {
+    h1 {
+      font-family: $h;
+      font-size: 40px;
+      color: white;
+    }
+
+    h2 {
+      font-family: $h;
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: white;
+      font-weight: $bold;
+    }
+
+    p {
+      font-family: $p;
+      font-size: 18px;
+      color: white;
+    
+    }
+  }
+
+  .botones_container {
+    a#consulta {
+      background-color: $verde;
+      border: 1px solid white;
+      color: #fff;
+      margin-top: 15px;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: $p;
+      font-weight: $semibold;
+      font-size: 16px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $verde-claro;
+        color: $verde;
+        border: 2px solid $verde;
+      }
+    }
+  }
+
+
+
+
+  //FRASE
+  .frase-motivacional {
+    padding: 3% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $verde;
+    animation: fadeInLeft 1s ease-in-out;
+
+    h2 {
+      font-family: $regular;
+      font-size: 1.5rem;
+      line-height: 1.6;
+
+      .resaltado {
+        font-weight: $bold;
+      }
+    }
+  }
+
+  @keyframes crecerTitilar {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
+  //LO QUE VAS A ENCONTRAR EN ESTA WEB
+  .que-encontras {
+  padding: 3%;
+  text-align: start;
 
   h2 {
     font-family: $h;
-    font-size: 32px;
     color: $verde;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: $semibold;
+  }
+
+  .contenidos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    max-width: 600px;
     margin: 0;
-    font-weight: bold;
+  }
+
+  .tarjeta {
+    display: flex;
+    align-items: center;
+    font-family: $p;
+    font-size: 18px;
+    color: black;
+    gap: 10px;
+    padding: 10px;
   }
 }
 
 
-.carousel-caption-custom-1 {
-    h1 {
-        font-family: $h;
-        font-size: 40px;
-        color: white;
-    }
+//SOBRE MI
+.sobre-meli {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 3% 5%;
 
 
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    animation: fadeInBlur 1.2s ease forwards;
+    margin-right: 30px;
+  }
 
+  .texto {
+    max-width: 600px;
+    animation: fadeInUp 1s ease;
+    
     h2 {
-        font-family: $h;
-        color: white;
-        font-size: 24px;
-        margin-bottom: 10px;
+      font-family: $h;
+      color: $verde;
+      font-size: 32px;
+      margin-bottom: 15px;
     }
 
     p {
+      font-family: $p;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .boton-sobre-mi {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: $verde;
+      color: white;
+      font-family: $p;
+      font-size: 18px;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $verde-claro;
+        color: $verde;
+        border: 2px solid $verde;
+      }
+    }
+  }
+}
+
+@keyframes fadeInBlur {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+
+//NEWSLETTER
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  min-height: 450px;
+  width: 100%;
+  flex-wrap: wrap;
+  
+
+  .img-nl {
+    flex: 1;
+    min-width: 300px;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .text-nl {
+    flex: 1;
+    background-color: #E4DFDB;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-family: "Classico", Trirong, Serif;
+      color: #8E7868;
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: $bold;
+      margin-bottom: 10px;
+    }
+    .resaltado-nl {
+        font-family: $p;
+        font-size: 18px;
+        color: black;
+        font-weight: $semibold;
+        margin-bottom: 10px;
+    }
+    p {
+      font-family: $p;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
         font-family: $p;
         font-size: 16px;
-        color: #333;
-        margin-bottom: 16px;
-    }
-}
+        color: black;
+        background-color: white;
 
-    .botones_container {
-        a#consulta {
-            background-color: $verde;
-            color: #fff;
-            margin-top: 15px;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-family: $p;
-            font-size: 16px;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background-color: $verde-claro;
-                color: $verde;
-                border: 2px solid $verde;
-            }
+        &::placeholder {
+          color: #8E7868;
         }
+      }
+
+      button {
+        background-color: #8E7868;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-family: $p;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken($gris, 10%);
+        }
+      }
     }
-
-
-
-.frase {
-    font-family: $h;
-    font-size: 24px;
-    text-align: center;
-    color: $verde;
-    padding: 5%;
-
+  }
 }
+
+/*----PREGUNTAS FRECUENTES----*/
+//Se utilizó el componente acordeón para hacer funcional las preguntas frecuentes
+.faq_container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: start !important;
+  }
+  
+  .faq_title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: $h;
+    color: $verde;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .faq_accordion {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .faq_item {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .accordion-header {
+    width: 100%;
+    font-size: 18px !important;
+  }
+  
+/* BOTTON DEL ACORDEÓN */
+  .faq_button {
+    background-color: $verde-claro;
+    color: $verde;
+    font-weight: bold;
+    font-family: $h;
+    width: 100% !important;
+    box-sizing: border-box;
+    white-space: normal;
+  
+    &:not(.collapsed) {
+      background-color: $verde-claro;
+      color: $verde;
+      font-family: $h;
+    }
+  
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  
+  .faq_body {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    font-family: $p;
+    font-size: 16px;
+  }
+  
+  .resaltado {
+    font-weight: bold;
+    font-family: $p;
+  }
+  
+  .contenedor_boton_faq {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .ver_mas_faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: $verde;
+    border: 2px solid $verde;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  
+    &:hover {
+      color: $verde;
+      border: 2px solid $verde;
+      background-color: $verde-claro;
+    }
+  }
+  

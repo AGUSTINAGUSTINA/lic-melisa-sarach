@@ -22,14 +22,14 @@ footer {
     // DIVISIONES DENTRO DE LA SECCIÓN
     div {
       flex: 1 50%;
-      margin: 20px;
+      margin: 10px;
       flex-direction: column;
       align-items: center;
  
         img {
-          max-width: 150px;
-          height: 40%;
-          width: 40%;
+          max-width: 259px;
+          height: 80%;
+          width: 80%;
           align-items: center;
         }
       }
@@ -38,18 +38,19 @@ footer {
         font-family: $h;
         font-weight: normal;
         font-size: 24px;
+        color: $verde;
       }
     
   }
   p {
     text-align: left;
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 18px;
     color: $verde;
     display: block;
     margin-bottom: 0;
     font-family: $p;
-    font-weight: $thin;
+    font-weight: $regular;
 
   
     &.footer_derechos_reservados {
