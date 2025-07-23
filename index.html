@@ -252,26 +252,25 @@
   </main>
   <!-- JAVA SCRIPT PARA NEWALETTER-->
   <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init('NDdTW99aXeLHQRb7p');  // poné tu public key de EmailJS aquí
-    })();
+ <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("NDdTW99aXeLHQRb7p"); // reemplazá con tu public key real
+  })();
 
-    // Capturamos el submit del formulario
-    document.getElementById('form-newsletter').addEventListener('submit', function (event) {
-      event.preventDefault();
+  function enviarFormulario(form) {
+    emailjs.sendForm("meli672", "melitemplate", form)
+      .then(function () {
+        alert("¡Gracias por suscribirte!");
+        form.reset();
+      }, function (error) {
+        alert("Hubo un error al enviar el formulario.");
+        console.error(error);
+      });
+    return false; // evita que el formulario recargue la página
+  }
+</script>
 
-      emailjs.sendForm('meli672', 'melitemplate', this)
-        .then(function () {
-          alert('Gracias por suscribirte! Pronto recibirás novedades.');
-          document.getElementById('form-newsletter').reset();
-        }, function (error) {
-          alert('Hubo un error al enviar el formulario. Por favor, intentá nuevamente.');
-          console.log('FAILED...', error);
-        });
-    });
-  </script>
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
