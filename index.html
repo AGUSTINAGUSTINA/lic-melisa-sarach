@@ -255,14 +255,14 @@
   <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
   <script>
     (function () {
-      emailjs.init('TU_PUBLIC_KEY');  // poné tu public key de EmailJS aquí
+      emailjs.init('NDdTW99aXeLHQRb7p');  // poné tu public key de EmailJS aquí
     })();
 
     // Capturamos el submit del formulario
     document.getElementById('form-newsletter').addEventListener('submit', function (event) {
       event.preventDefault();
 
-      emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
+      emailjs.sendForm('meli672', 'melitemplate', this)
         .then(function () {
           alert('Gracias por suscribirte! Pronto recibirás novedades.');
           document.getElementById('form-newsletter').reset();
@@ -304,18 +304,39 @@
       <div class="redes">
         <h3 class="footer">Nuestras redes</h3>
         <div class="iconos">
-          <img src="assets/linkedin.png" alt="Ir al perfil de Linkedin de la Licenciada Melisa Sarach"
-            title="Ir al perfil de Linkedin" class="icono-redes">
-          <img src="assets/instagram.png" alt="Ir al perfil de Instagram de la Licenciada Melisa Sarach"
-            title="Ir al perfil de Instagram" class="icono-redes">
-          <img src="assets/facebook.png" alt="Ir al perfil de Facebook de la Licenciada Melisa Sarach"
-            title="Ir al perfil de Facebook" class="icono-redes">
-          <img src="assets/mail.png" alt="Enviar un mail a la licenciada Melisa Sarach" title="Enviar un mail"
-            class="icono-redes">
-          <img src="assets/youtube.png" alt="Ir al canal de youtube de la Licenciada Melisa Sarach"
-            title="Ir al canal de youtube" class="icono-redes">
-          <img src="assets/tiktok.png" alt="Ir al perfil de Tiktok de la Licenciada Melisa Sarach"
-            title="Ir al perfil de Tiktok" class="icono-redes">
+          <a href="https://www.linkedin.com/in/nutrimelisarach?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank" rel="noopener">
+            <img src="assets/linkedin.png" alt="Ir al perfil de Linkedin de la Licenciada Melisa Sarach"
+              title="Ir al perfil de Linkedin" class="icono-redes">
+          </a>
+
+          <a href="https://www.instagram.com/nutrimelisarach?igsh=cWxpZTd3OTBvcXZv&utm_source=qr" target="_blank"
+            rel="noopener">
+            <img src="assets/instagram.png" alt="Ir al perfil de Instagram de la Licenciada Melisa Sarach"
+              title="Ir al perfil de Instagram" class="icono-redes">
+          </a>
+
+          <a href="https://www.facebook.com/nutri.melisarach/" target="_blank" rel="noopener">
+            <img src="assets/facebook.png" alt="Ir al perfil de Facebook de la Licenciada Melisa Sarach"
+              title="Ir al perfil de Facebook" class="icono-redes">
+          </a>
+
+          <a href="https://mail.google.com/mail/?view=cm&to=lic.nutricion.sarach@gmail.com" target="_blank"
+            rel="noopener">
+            <img src="assets/mail.png" alt="Enviar un mail a la licenciada Melisa Sarach" title="Enviar un mail"
+              class="icono-redes">
+          </a>
+
+
+          <a href="https://youtube.com/@nutrimelisarach?si=sWrbfTU_ojC8CvxS" target="_blank" rel="noopener">
+            <img src="assets/youtube.png" alt="Ir al canal de youtube de la Licenciada Melisa Sarach"
+              title="Ir al canal de youtube" class="icono-redes">
+          </a>
+
+          <a href="https://www.tiktok.com/@nutri.melisarach?_t=ZM-8y1CfxIUaVM&_r=1" target="_blank" rel="noopener">
+            <img src="assets/tiktok.png" alt="Ir al perfil de Tiktok de la Licenciada Melisa Sarach"
+              title="Ir al perfil de Tiktok" class="icono-redes">
+          </a>
+
 
         </div>
       </div>
