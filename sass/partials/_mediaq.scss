@@ -1,0 +1,390 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// RESET Y BASES GENERALES
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; // evitar scroll horizontal
+    font-family: $p; // tu font base de párrafos
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// Imágenes y medios responsivos
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Contenedores base para evitar overflow en flexbox
+.container,
+section,
+div {
+    min-width: 0;
+}
+
+// HEADER
+header {
+    .custom-navbar {
+        padding: 1rem;
+
+        .logo_navbar {
+            width: 120px;
+            height: auto;
+        }
+
+        .custom_toggler {
+            display: block;
+        }
+
+        .custom_collapse {
+            display: none;
+        }
+    }
+}
+
+
+
+.carousel-item {
+    position: relative;
+    display: none; // ocultar todas las slides por defecto
+
+    &.active {
+        display: block; // mostrar solo la slide activa
+    }
+
+    img {
+        display: block;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .carousel-caption-custom-1,
+    .carousel-caption-custom-2,
+    .carousel-caption-custom-3 {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        color: $blanco;
+        max-width: 90%;
+        border-radius: 8px;
+        font-size: 0.9rem; // tamaño base para p
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 90%; // ya está, pero si quieres más control podrías bajarlo a 80%
+        padding: 1rem 1.5rem; // agregar algo más de padding horizontal
+        word-wrap: break-word;
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1rem; // 16px
+            margin: 0;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 6px;
+            background-color: $verde;
+            color: $blanco;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $verde-claro;
+                color: $verde;
+                border: 2px solid $verde;
+            }
+        }
+    }
+}
+
+
+// SOBRE MELI
+.sobre-meli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+
+    img {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .texto {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+
+// NEWSLETTER
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+
+    .img-nl {
+        display: none; // ocultamos la imagen original
+    }
+
+    .text-nl {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        padding: 2rem;
+        background-image: url('../assets/newsletter.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 12px;
+        color: $blanco; // para contraste
+
+        h2,
+        p,
+        input,
+        button {
+            margin-bottom: 1rem;
+            width: 100%;
+            display: block;
+        }
+
+        input {
+            padding: 0.7rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            font-family: $p;
+        }
+
+        button {
+            background-color: $verde;
+            color: $blanco;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: $bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $verde-claro;
+                color: $verde;
+                border: 2px solid $verde;
+            }
+        }
+    }
+}
+
+// FOOTER
+footer {
+    background-color: $beige;
+    color: $verde;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        div {
+            flex: 1 50%;
+            margin: 10px;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                max-width: 259px;
+                height: 80%;
+                width: 80%;
+                align-items: center;
+            }
+
+            h3 {
+                text-align: left;
+                font-family: $h;
+                font-weight: normal;
+                font-size: 24px;
+                color: $verde;
+            }
+        }
+    }
+
+    p {
+        text-align: left;
+        margin-top: 8px;
+        font-size: 18px;
+        color: $verde;
+        display: block;
+        margin-bottom: 0;
+        font-family: $p;
+        font-weight: $regular;
+
+        &.footer_derechos_reservados {
+            text-align: left;
+            margin-top: 8px;
+            font-size: 1rem;
+            color: $verde;
+            margin-bottom: 0;
+            flex-basis: 100%;
+        }
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+
+        .iconos {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+            cursor: pointer;
+            margin: 8px;
+
+            .icono-redes {
+                width: 32px;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+// MEDIA QUERY MOBILE-TABLET PARA FOOTER EN COLUMNA
+@include mobile-tablet {
+    footer {
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            padding: 0 1rem;
+            box-sizing: border-box;
+
+            div {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            .mapa-container,
+            .redes {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+
+            .mapa-container {
+                overflow: hidden;
+
+                iframe {
+                    width: 100%;
+                    height: 250px; // tamaño fijo para controlar layout
+                    border: 0;
+                    display: block;
+                    box-sizing: border-box;
+                }
+            }
+
+            h3,
+            p {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        .redes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 0 1rem;
+
+            .iconos {
+                display: flex;
+                flex-wrap: wrap; // para que los íconos salten a la siguiente línea si no entran
+                justify-content: center;
+                gap: 12px;
+                max-width: 100%;
+                box-sizing: border-box;
+
+                .icono-redes {
+                    width: 32px;
+                    height: auto;
+                    display: block;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        p.footer_derechos_reservados {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+            padding: 0 1rem;
+        }
+    }
+
+    body,
+    html {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+}
