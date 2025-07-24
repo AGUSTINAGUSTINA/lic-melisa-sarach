@@ -114,11 +114,11 @@ de navegacion en mobile*/
 
 
       &:hover {
-        text-decoration: underline; // Subrayado al pasar el mouse
-        text-underline-offset: 4px; // Aleja un poco la línea
-        text-decoration-thickness: 1.5px; // Opcional: más fina o gruesa
+        text-decoration: underline; 
+        text-underline-offset: 4px; 
+        text-decoration-thickness: 1.5px; 
         color: $verde;
-        transition: all 0.4s ease-in-out; // Ajustá la velocidad
+        transition: all 0.4s ease-in-out; 
 
       }
     }
@@ -148,11 +148,12 @@ de navegacion en mobile*/
     color: $verde;
     text-decoration: none;
     border-color: solid $verde;
+    text-decoration: none;
   }
 }
 
 .menu_icon {
-  border: none;
+  border: none !important;
   width: 24px;
   height: 24px;
 
@@ -161,10 +162,3 @@ de navegacion en mobile*/
   }
 }
 
-.span-brand {
-  font-family: $p;
-  font-size: 16px;
-  margin-left: 0px;
-  font-weight: $semibold;
-  color: $verde;
-}
