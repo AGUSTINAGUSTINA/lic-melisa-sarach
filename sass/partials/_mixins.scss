@@ -24,4 +24,11 @@
   }
 }
 
-  
+@mixin titulo-fondo {
+  font-size: 150px;
+  color: rgba(#5A796E, 0.15);
+  text-align: left;
+  font-weight: $regular;
+  margin-left: 10px;
+}
+ 

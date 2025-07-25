@@ -1,0 +1,90 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+h1.pages {
+  @include titulo-fondo;
+}
+.sobre-mi {
+  padding: 1rem 3rem;
+
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .imagen {
+      flex: 1 1 150px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+      }
+    }
+
+    .texto {
+      flex: 2 1 600px;
+
+      .pages {
+        position: relative;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: $gris;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          height: 2px;
+          width: 100vw;
+          background-color: $gris;
+          z-index: -1;
+        }
+      }
+
+      .parrafos {
+        column-count: 2;
+        column-gap: 2rem;
+
+        p {
+          margin-bottom: 1rem;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+.frase {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: $beige;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-bottom-right-radius: 150px;
+  border-top-right-radius: 150px;
+  border: 2px solid $gris;
+
+
+  img {
+  width: 300px;
+  height: 300px; // igual que el ancho
+  border-radius: 50%; // esto hace el círculo perfecto
+  object-fit: cover; // para que no se deforme si la imagen no es cuadrada
+  border: 6px solid $gris;
+}
+
+  span {
+    flex: 1;
+    font-style: italic;
+    font-size: 38px;
+    color: $gris; 
+    font-weight: $bold;
+  }
+
+}

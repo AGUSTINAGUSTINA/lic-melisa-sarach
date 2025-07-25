@@ -55,7 +55,7 @@
               <a class="nav-link custom_links" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item custom_item">
-              <a class="nav-link custom_links" href="sobre.mi.html">Sobre mí</a>
+              <a class="nav-link custom_links" href="pages/sobre-mi.html">Sobre mí</a>
             </li>
             <li class="nav-item custom_item">
               <a class="nav-link custom_links" href="servicios.html">Servicios</a>
@@ -98,7 +98,8 @@
           <img src="assets/carrusel2.png" class="d-block w-100" alt="Licenciada Melisa Sarach sosteniendo vaso de jugo">
           <div class="carousel-caption-custom-2">
             <h2 class="destellos">Unite a mi comunidad</h2>
-            <p> Ser parte de esta comunidad es rodearte de mujeres reales que eligen cuidarse desde el amor. Acá compartimos herramientas y hábitos que te ayudan a sentirte mejor sin
+            <p> Ser parte de esta comunidad es rodearte de mujeres reales que eligen cuidarse desde el amor. Acá
+              compartimos herramientas y hábitos que te ayudan a sentirte mejor sin
               dejar de disfrutar.</p>
             <div class="botones_container">
               <a href="comunidad.html" id="consulta">Unirme</a>
@@ -179,7 +180,7 @@
         <span class="resaltado-nl">Formá parte para recibir novedades exclusivas.</span>
         <p>Te va a llegar contenido práctico, motivador y real para acompañarte paso a paso.</p>
         <p> <span class="resaltado-nl">Suscribite</span> para recibir noticias y novedades.</p>
-        <form id="form-newsletter"class="form" onsubmit="return enviarFormulario(this)">
+        <form id="form-newsletter" class="form" onsubmit="return enviarFormulario(this)">
           <input type="text" name="nombre" placeholder="Nombre" required>
           <input type="text" name="apellido" placeholder="Apellido" required>
           <input type="email" name="email" placeholder="Email" required>
@@ -250,24 +251,24 @@
   </main>
   <!-- JAVA SCRIPT PARA NEWALETTER-->
   <!-- EmailJS SDK -->
- <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init("NDdTW99aXeLHQRb7p"); // reemplazá con tu public key real
-  })();
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("NDdTW99aXeLHQRb7p"); // reemplazá con tu public key real
+    })();
 
-  function enviarFormulario(form) {
-    emailjs.sendForm("meli672", "melitemplate", form)
-      .then(function () {
-        alert("¡Gracias por suscribirte!");
-        form.reset();
-      }, function (error) {
-        alert("Hubo un error al enviar el formulario.");
-        console.error(error);
-      });
-    return false; // evita que el formulario recargue la página
-  }
-</script>
+    function enviarFormulario(form) {
+      emailjs.sendForm("meli672", "melitemplate", form)
+        .then(function () {
+          alert("¡Gracias por suscribirte!");
+          form.reset();
+        }, function (error) {
+          alert("Hubo un error al enviar el formulario.");
+          console.error(error);
+        });
+      return false; // evita que el formulario recargue la página
+    }
+  </script>
 
 
   <!-- AOS JS -->
@@ -293,7 +294,7 @@
         <h3 class="footer">Ubicación</h3>
         <div class="mapa-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13324.93826449738!2d-64.22780319147637!3d-31.37673950340616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a27e0ae87485%3A0x4f3768e253ba7a7a!2sRafael%20Nu%C3%B1ez%201988%2C%20X5009DYT%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1712098567890!5m2!1ses!2sar"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13638.602183773135!2d-64.19130102020656!3d-31.42156350313041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a285a6224201%3A0x54a69101baccd4c1!2sIndependencia%20468%2C%20X5001%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1721821866502!5m2!1ses!2sar"
             class="mapa-ubicacion" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
         </div>
@@ -301,7 +302,8 @@
       <div class="redes">
         <h3 class="footer">Nuestras redes</h3>
         <div class="iconos">
-          <a href="https://www.linkedin.com/in/nutrimelisarach?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/nutrimelisarach?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
+            target="_blank" rel="noopener">
             <img src="assets/linkedin.png" alt="Ir al perfil de Linkedin de la Licenciada Melisa Sarach"
               title="Ir al perfil de Linkedin" class="icono-redes">
           </a>

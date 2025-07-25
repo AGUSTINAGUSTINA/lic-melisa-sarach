@@ -1,7 +1,8 @@
 @use 'partials/variables' as *;
+@use 'partials/mixins' ;
 @use 'partials/reset';
 @use 'partials/header';
 @use 'partials/footer' ;
 @use 'partials/index' ;
+@use 'partials/main_sobre-mi' ;
 @use 'partials/mediaq' ;
-@use 'partials/mixins' ;

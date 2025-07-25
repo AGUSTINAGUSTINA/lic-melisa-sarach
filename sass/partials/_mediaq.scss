@@ -37,12 +37,15 @@ div {
     h1 {
         font-size: 20px;
     }
+
     h2 {
         font-size: 18px;
-    } 
+    }
+
     h3 {
         font-size: 16px;
     }
+
     p {
         font-size: 14px;
     }
@@ -55,127 +58,136 @@ div {
 
 /* Desktop */
 @include desktop {
-  .navbar-nav {
-    justify-content: flex-end;
-  }
+    .navbar-nav {
+        justify-content: flex-end;
+    }
 }
 
 /* Mobile */
 @include mobile {
-  .custom_navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .custom_navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .container_custom_navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .container_custom_navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .custom-navbar li a {
-    text-align: center;
-    justify-content: center;
-  }
+    .custom-navbar li a {
+        text-align: center;
+        justify-content: center;
+    }
 
-  .custom_item {
-    text-align: center;
-    justify-content: center;
-  }
+    .custom_item {
+        text-align: center;
+        justify-content: center;
+    }
 
-  .custom_links {
-    text-align: center;
-    justify-content: center;
-  }
+    .custom_links {
+        text-align: center;
+        justify-content: center;
+    }
 
 
-  .nav_turnos {
-    margin-top: 10px;
-    color: white !important;
-    background-color: $verde !important;
-  }
+    .nav_turnos {
+        margin-top: 10px;
+        color: white !important;
+        background-color: $verde !important;
+    }
 }
 
 
 /* Tablet */
 @include tablet {
-  .custom_navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .custom_navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .container_custom_navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .container_custom_navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .custom-navbar li a {
-    text-align: center;
-    justify-content: center;
-  }
+    .custom-navbar li a {
+        text-align: center;
+        justify-content: center;
+    }
 
-  .custom_item {
-    text-align: center;
-    justify-content: center;
-  }
+    .custom_item {
+        text-align: center;
+        justify-content: center;
+    }
 
-  .custom_links {
-    text-align: center;
-    justify-content: center;
-  }
+    .custom_links {
+        text-align: center;
+        justify-content: center;
+    }
 
 
-  .nav_turnos {
+    .nav_turnos {
 
-    color: white !important;
-    background-color: $verde !important;
-  }
+        color: white !important;
+        background-color: $verde !important;
+    }
 }
 
 /* Menú hamburguesa (mobile) */
 @include mobile {
 
-  .custom_toggler {
-    width: 121px;
-    height: 32px;
+    .custom_toggler {
+        width: 121px;
+        height: 32px;
 
-    .menu_icon {
-      display: block;
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
+        .menu_icon {
+            display: block;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
 
+        }
     }
-  }
 }
 
-  /* Menú hamburguesa (tablet) */
-  @include tablet {
+/* Menú hamburguesa (tablet) */
+@include tablet {
     .custom_toggler {
-      width: 121px;
-      height: 32px;
+        width: 121px;
+        height: 32px;
 
     }
 
     .menu_icon {
-      width: 32px;
-      height: 32px;
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
 
     }
 
-  }
+}
 
 
 
 
 
 // CARRUSEL - TABLET y MOBILE
+
+@include mobile-tablet {
+    .carousel-item img {
+        width: 100% !important;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 @include mobile-tablet {
 
     .carousel-caption-custom,
@@ -186,7 +198,8 @@ div {
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 100% !important;
+        height: 100%;
         padding: 0 8px;
         display: flex;
         flex-direction: column;
@@ -194,7 +207,7 @@ div {
         max-height: 140px;
 
         h1 {
-            font-size: 20px;
+            font-size: 20px !important;
             margin-bottom: 8px;
         }
 
@@ -233,7 +246,7 @@ div {
         .botones_container {
             margin-top: 0px;
             margin-bottom: 5px;
-    
+
 
             a#consulta {
                 background-color: #8E7868 !important;
@@ -262,96 +275,161 @@ div {
 
 
 
+
 // SOBRE MELI
-@include mobile-tablet{
-.sobre-meli {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
+@include mobile-tablet {
+    .sobre-meli {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
 
-      h2 {
-        font-size: 18px;
-    } 
+        h2 {
+            font-size: 24px !important;
+        }
 
-    p{
-        font-size: 14px;
+        p {
+            font-size: 14px;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .texto {
+            max-width: 90%;
+            text-align: center;
+        }
     }
+}
 
-    img {
-        max-width: 80%;
-        height: auto;
-        margin-bottom: 1.5rem;
-    }
+@include mobile-tablet {
+    .que-encontras {
+    padding: 3%;
+    text-align: start;
 
-    .texto {
-        max-width: 90%;
+    h2 {
+        font-family: $h;
+        color: $verde;
+        font-size: 24px; // Reducido de 32px a 24px
+        margin-bottom: 30px;
+        font-weight: $semibold;
         text-align: center;
     }
+
+    .contenidos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        max-width: 600px;
+        margin: 0;
+    }
+
+    .tarjeta {
+        display: flex;
+        align-items: center;
+        font-family: $p;
+        font-size: 18px;
+        color: black;
+        gap: 10px;
+        padding: 10px;
+
+        img {
+            width: 24px;   // Ajuste tamaño imagen
+            height: 24px;  // Ajuste tamaño imagen
+            object-fit: contain;
+        }
+    }
 }
+
 }
+.frase-motivacional {
+        padding: 3% 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $verde;
+        animation: fadeInLeft 1s ease-in-out;
+
+        h2 {
+            font-family: $regular;
+            font-size: 18x !important;
+            line-height: 1.6;
+
+            .resaltado {
+                font-weight: $bold;
+            }
+        }
+    }
+
+
 
 // NEWSLETTER
 @include mobile-tablet {
-.newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 1rem;
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
 
-    .img-nl {
-        display: none; // ocultamos la imagen original
-    }
+        .img-nl {
+            display: none; // ocultamos la imagen original
+        }
 
-    .text-nl {
-        width: 100%;
-        max-width: 400px;
-        text-align: center;
-        padding: 2rem;
-        background-image: url('../assets/newsletter.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        border-radius: 12px;
-        color: $blanco; // para contraste
-
-        h2,
-        p,
-        input,
-        button {
-            margin-bottom: 1rem;
+        .text-nl {
             width: 100%;
-            display: block;
-        }
+            max-width: 400px;
+            text-align: center;
+            padding: 2rem;
+            background-image: url('../assets/newsletter.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 12px;
+            color: $blanco; // para contraste
 
-        input {
-            padding: 0.7rem;
-            border-radius: 5px;
-            border: none;
-            font-size: 1rem;
-            font-family: $p;
-        }
+            h2,
+            p,
+            input,
+            button {
+                margin-bottom: 1rem;
+                width: 100%;
+                display: block;
+            }
 
-        button {
-            background-color: $verde;
-            color: $blanco;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: $bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            input {
+                padding: 0.7rem;
+                border-radius: 5px;
+                border: none;
+                font-size: 1rem;
+                font-family: $p;
+            }
 
-            &:hover {
-                background-color: $verde-claro;
-                color: $verde;
-                border: 2px solid $verde;
+            button {
+                background-color: $verde;
+                color: $blanco;
+                padding: 0.8rem;
+                border: none;
+                border-radius: 6px;
+                font-weight: $bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: $verde-claro;
+                    color: $verde;
+                    border: 2px solid $verde;
+                }
             }
         }
     }
 }
-}
+
 // FOOTER
 footer {
     background-color: $beige;
@@ -533,3 +611,76 @@ footer {
         overflow-x: hidden;
     }
 }
+
+
+/*--------------PAGE SOBRE MI-------------*/
+@include mobile-tablet {
+    h1.pages {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .sobre-mi {
+        padding: 1rem 1rem;
+
+        .contenido {
+            flex-direction: column;
+            padding: 1rem;
+
+            .imagen {
+                flex: 1 100%;
+
+                img {
+                    width: 100%;
+                    max-width: 300px;
+                    margin: 0 auto;
+                    display: block;
+                    align-self: center;
+                }
+            }
+
+            .texto {
+                flex: 1 100%;
+
+                .pages {
+                    font-size: 18px;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                h1.pages {
+                    font-size: 24px;
+                }
+
+                .parrafos {
+                    column-count: 1;
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+  // Versión mobile
+  @include mobile-tablet {
+    .frase {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    span {
+      font-size: 24px !important;
+      margin-top: 1rem;
+    }
+  }
