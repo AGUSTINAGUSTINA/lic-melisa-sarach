@@ -915,6 +915,7 @@ div {
     padding: 0 8px;
     display: block;
     z-index: 10;
+    pointer-events: none;
   }
   .carousel-caption-custom h1,
   .carousel-caption-custom-1 h1,
@@ -994,6 +995,8 @@ div {
     height: 24px !important;
     background-size: 100% 100%;
     margin: 2px;
+    z-index: 30 !important;
+    pointer-events: auto !important;
   }
   .carousel-control-prev-icon {
     left: 3px !important;

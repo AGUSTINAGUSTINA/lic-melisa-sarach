@@ -181,7 +181,7 @@ div {
 
     }
 
-   
+
 }
 
 
@@ -214,6 +214,7 @@ div {
         padding: 0 8px;
         display: block;
         z-index: 10;
+        pointer-events: none;
 
 
         h1 {
@@ -292,6 +293,8 @@ div {
         height: 24px !important;
         background-size: 100% 100%;
         margin: 2px;
+        z-index: 30 !important;
+        pointer-events: auto !important;
     }
 
     .carousel-control-prev-icon {
@@ -381,76 +384,77 @@ div {
 
 // NEWSLETTER
 @include mobile-tablet {
-  .newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1rem;
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1rem;
 
-    .img-nl {
-      display: none; // ocultamos la imagen original
-    }
-
-    .text-nl {
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      padding: 2rem;
-      background-image: url('../assets/newsletter.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      border-radius: 12px;
-      color: $blanco;
-
-      h2 {
-        font-size: 24px;
-        font-weight: bold;
-        color: #000;
-      }
-
-      .resaltado-nl {
-        font-size: 18px !important;
-        font-weight: 600;
-        color: #000;
-      }
-
-      p,
-      input,
-      button {
-        margin-bottom: 18px !important;
-        width: 100%;
-        display: block;
-      }
-
-      input {
-        padding: 0.7rem;
-        border-radius: 5px;
-        border: none;
-        font-size: 1rem;
-        font-family: $p;
-      }
-
-      button {
-        background-color: $verde;
-        color: $blanco;
-        padding: 0.8rem;
-        border: none;
-        border-radius: 6px;
-        font-weight: $bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: $verde-claro;
-          color: $verde;
-          border: 2px solid $verde;
+        .img-nl {
+            display: none; // ocultamos la imagen original
         }
-      }
+
+        .text-nl {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            padding: 2rem;
+            background-image: url('../assets/newsletter.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 12px;
+            color: $blanco;
+
+            h2 {
+                font-size: 24px;
+                font-weight: bold;
+                color: #000;
+            }
+
+            .resaltado-nl {
+                font-size: 18px !important;
+                font-weight: 600;
+                color: #000;
+            }
+
+            p,
+            input,
+            button {
+                margin-bottom: 18px !important;
+                width: 100%;
+                display: block;
+            }
+
+            input {
+                padding: 0.7rem;
+                border-radius: 5px;
+                border: none;
+                font-size: 1rem;
+                font-family: $p;
+            }
+
+            button {
+                background-color: $verde;
+                color: $blanco;
+                padding: 0.8rem;
+                border: none;
+                border-radius: 6px;
+                font-weight: $bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: $verde-claro;
+                    color: $verde;
+                    border: 2px solid $verde;
+                }
+            }
+        }
     }
-  }
 }
+
 //FOOTER
 footer {
     background-color: $beige;
