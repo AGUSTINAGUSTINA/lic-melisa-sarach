@@ -1,0 +1,18 @@
+@use './variables' as *;
+/* BOTON DE WHATSAPP*/
+.floating-whatsapp {
+ position: fixed !important;
+ bottom: 20px !important;
+ right: 20px !important;
+ z-index: 9999 !important;
+ border-radius: 50%; 
+ display: inline-block; 
+ background-color: transparent;
+  img {
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px; 
+    display: block; 
+    object-fit: cover; 
+  }
+}
