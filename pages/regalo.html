@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Sarach | Sobre mí</title>
+</head>
+
+<body>
+    <!-- Tipografía Trirong p/titulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tipografía Taviraj p/parrafo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="../css/stylesass.css">
+    </head>
+    <header>
+        <!-- BARRA DE NAVEGACION-->
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid links_container">
+                <!-- LOGO BRAND -->
+                <a class="navbar-brand logo_container" href="../index.html" title="Ir a Inicio">
+                    <img src="../assets/brand.png" alt="Logo de la licenciada Melisa Sarach" class="logo_navbar">
+                </a>
+                <!-- MENÚ HAMBURGUESA (visible en mobile y tablet)-->
+                <button class="navbar-toggler custom_toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon menu_icon"></span>
+                </button>
+                <!--BARRA EN DESKTOP (un link al lado del otro a la derecha)-->
+                <div class="collapse navbar-collapse custom_collapse" id="navbarNav">
+
+                    <div class="navbar-content container_custom_navbar">
+                        <ul class="navbar-nav custom_navbar">
+                            <li class="nav-item custom_item">
+                                <a class="nav-link custom_links" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item custom_item">
+                                <a class="nav-link custom_links" href="sobre.mi.html">Sobre mí</a>
+                            </li>
+                            <li class="nav-item custom_item">
+                                <a class="nav-link custom_links" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item custom_item">
+                                <a class="nav-link custom_links" href="tienda.html">Tienda</a>
+                            </li>
+                            <li class="nav-item custom_item">
+                                <a class="nav-link custom_links" href="comunidad.html">Comunidad</a>
+                            </li>
+                            <li class="nav-item custom_links">
+                                <a class="nav-link-boton-turnos nav_turnos" href="turnos.html">Turnos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="regalo">
+            <div class="contenido">
+                <div class="texto">
+                    <h1>Mis recetas favoritas</h1>
+                    <h2>Gratis</h2>
+                    <p>Este es un regalo para vos, con mucho amor. Con mis recetas favoritas para que nutrirte sea
+                        simple, rico, práctico y completo.</p>
+
+                    <button type="button" class="btn-descarga" data-access-product="free">
+                        <span uk-icon="icon: download"></span> Descargalo Gratis
+                    </button>
+
+                    <div class="imagenes-recetas">
+                        <img src="../assets/receta1.png" alt="Receta 1">
+                        <img src="../assets/receta2.png" alt="Receta 2">
+                        <img src="../assets/receta3.png" alt="Receta 3">
+                       
+                    </div>
+                     <p>Este recetario está pensado para acompañarte a crear una vida más plena y nutritiva. Vas a
+                            encontrar recetas dulces y saladas, todas saludables, fáciles de preparar y llenas de sabor.
+                            Incorporalas a tu rutina y empezá a construir hábitos que te hagan sentir bien de verdad.
+                        </p>
+                        <p>¡Vos podés hacerlo simple, delicioso y con amor! </p>
+                        <p>Este regalo es por tiempo limitado asi que no te lo pierdas, apretá el botón y descargalo para empezar a disfrutar de estas recetas del bien</p>
+                </div>
+            </div>
+
+            <div class="imagen">
+                <img src="../assets/regalo.png" alt="Licenciada cocinando">
+            </div>
+        </section>
+
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Bootstrap JS vía CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <section>
+
+            <div>
+                <img src="../assets/logo-footer.png" alt="logo">
+
+            </div>
+            <div>
+                <h3 class="footer_contacto">Contacto</h3>
+                <p>Mail: </p>
+                <p>Teléfono: </p>
+            </div>
+            <div>
+                <h3 class="footer">Ubicación</h3>
+                <div class="mapa-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13638.602183773135!2d-64.19130102020656!3d-31.42156350313041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a285a6224201%3A0x54a69101baccd4c1!2sIndependencia%20468%2C%20X5001%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1721821866502!5m2!1ses!2sar"
+                        class="mapa-ubicacion" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="redes">
+                <h3 class="footer">Nuestras redes</h3>
+                <div class="iconos">
+                    <a href="https://www.linkedin.com/in/nutrimelisarach?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
+                        target="_blank" rel="noopener">
+                        <img src="../assets/linkedin.png" alt="Ir al perfil de Linkedin de la Licenciada Melisa Sarach"
+                            title="Ir al perfil de Linkedin" class="icono-redes">
+                    </a>
+
+                    <a href="https://www.instagram.com/nutrimelisarach?igsh=cWxpZTd3OTBvcXZv&utm_source=qr"
+                        target="_blank" rel="noopener">
+                        <img src="../assets/instagram.png"
+                            alt="Ir al perfil de Instagram de la Licenciada Melisa Sarach"
+                            title="Ir al perfil de Instagram" class="icono-redes">
+                    </a>
+
+                    <a href="https://www.facebook.com/nutri.melisarach/" target="_blank" rel="noopener">
+                        <img src="../assets/facebook.png" alt="Ir al perfil de Facebook de la Licenciada Melisa Sarach"
+                            title="Ir al perfil de Facebook" class="icono-redes">
+                    </a>
+
+                    <a href="https://mail.google.com/mail/?view=cm&to=lic.nutricion.sarach@gmail.com" target="_blank"
+                        rel="noopener">
+                        <img src="../assets/mail.png" alt="Enviar un mail a la licenciada Melisa Sarach"
+                            title="Enviar un mail" class="icono-redes">
+                    </a>
+
+
+                    <a href="https://youtube.com/@nutrimelisarach?si=sWrbfTU_ojC8CvxS" target="_blank" rel="noopener">
+                        <img src="../assets/youtube.png" alt="Ir al canal de youtube de la Licenciada Melisa Sarach"
+                            title="Ir al canal de youtube" class="icono-redes">
+                    </a>
+
+                    <a href="https://www.tiktok.com/@nutri.melisarach?_t=ZM-8y1CfxIUaVM&_r=1" target="_blank"
+                        rel="noopener">
+                        <img src="../assets/tiktok.png" alt="Ir al perfil de Tiktok de la Licenciada Melisa Sarach"
+                            title="Ir al perfil de Tiktok" class="icono-redes">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <p class="footer_derechos_reservados">© 2015 Lic. Melisa Sarach - Todos los Derechos Reservados</p>
+    </footer>
+
+</body>
+
+</html>

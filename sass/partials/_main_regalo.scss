@@ -1,0 +1,87 @@
+@use 'variables' as *;
+.regalo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .contenido {
+    flex: 1 1 50%;
+    padding: 1rem;
+
+    .texto {
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $verde;
+        margin-bottom: 20px;
+
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $verde;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .btn-descarga {
+        background-color: $verde;
+        font-weight: $semibold;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $verde-claro;
+          color: $verde;
+        }
+
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .imagenes-recetas {
+      display: flex;
+      gap: 15px;
+      margin-top: 1rem;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 180px;
+        height: auto;
+        border-radius: 8px;
+        align-items: center;
+    
+      }
+    }
+  }
+
+  .imagen {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  }
+}

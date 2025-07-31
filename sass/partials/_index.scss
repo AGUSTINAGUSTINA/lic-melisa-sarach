@@ -22,6 +22,9 @@
         p {
             color: white;
         }
+        .botones_container {
+            margin-top: 20px;
+        }
     }
 
     .carousel-caption-custom-2 {
@@ -299,8 +302,77 @@
             filter: blur(0);
         }
     }
+//SECCION TESTIMONIOS
+h2.testimonio{
+  font-family: $h;
+  font-size: 32px;
+  font-weight: $regular;
+  color: $verde;
+  margin-left: 35px;
+  text-align: left;
+}
+.testimonios-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  align-items: flex-start;
+  width: 100%; /* importante */
+  max-width: 1200px; /* opcional para no ser muy ancho */
+  margin: 0 auto;
+  border: 1px solid transparent; /* para debug, borrá luego */
+}
 
+.card-testimonios {
+  background-color: $verde-claro;
+  border-radius: 28px;
+  padding: 40px 20px 20px 20px;
+  position: relative;
+  text-align: center;
+  max-width: 320px;
+  /* margin: auto; */
+  margin-bottom: 20px;
+  margin-top: 50px;
+  border: 2px solid $verde;
+  flex: 0 0 320px; /* ancho fijo, no crece ni se achica */
 
+  .icon-container {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $verde;
+    border-radius: 50%;
+    padding: 3px;
+
+    img {
+      width: 95px;
+      height: 95px;
+      object-fit: contain;
+    }
+  }
+
+  .card-content {
+    margin-top: 30px;
+
+    .card-name {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      color: $verde;
+    }
+
+    p {
+      font-size: 18px;
+      color: black;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+  }
+}
     //NEWSLETTER
     .newsletter {
         display: flex;
