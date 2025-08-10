@@ -1,0 +1,114 @@
+@use 'variables' as *;
+
+.descripcion-planes {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem; // espacio entre imagen y texto
+    margin-bottom: 1rem;
+    padding: 1%;
+    margin-left: 10px;
+
+    img {
+        width: 30%;
+        height: auto;
+        display: block;
+    }
+
+    .texto-planes {
+        width: 70%;
+    }
+
+    .planes {
+        font-weight: $bold;
+        color: $gris;
+        display: block; // para que ocupe su propia línea
+        margin-bottom: 1rem;
+        font-size: 20px;
+        margin-right: 5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+        background: $gris-clarito;
+        padding: 15px;
+        border: $gris 1px solid;
+    }
+
+    h3.plan {
+        color: $verde;
+    }
+}
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+    h3 {
+        grid-column: 1 / -1;
+        text-align: start;
+        margin-bottom: 0%;
+        color: $verde;
+        margin-left: 0%;
+    }
+
+    .plan-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #fff;
+        height: 100%;
+        box-sizing: border-box;
+
+        p {
+            color: $verde;
+            font-weight: $bold;
+        }
+
+        img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+.plan-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $verde-claro;
+    margin: 5px 25px 10px 25px;
+    padding: 10px;
+    border: $verde 2px solid;
+
+    p {
+        font-weight: $semibold;
+        margin-bottom: 1rem;
+        color: $verde;
+        margin-left: 10px;
+        text-align: center;
+        padding-top: 24px;
+
+    }
+
+    .btn-planes {
+        background-color: $verde;
+        font-weight: $semibold;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+}
